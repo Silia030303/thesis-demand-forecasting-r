@@ -11,8 +11,8 @@ The thesis studies weekly sales of a single consumer product (**138 weekly obser
 
 ## Methods
 
-| Step | What is done | Script |
-|---|---|---|
+| Step | What is done 
+|---|---
 | Exploration | Time-series plots, descriptive statistics, correlation matrix 
 | Variable selection | Exhaustive search over 2⁷ − 1 = 127 OLS models, ranked by BIC (AIC as a secondary criterion)
 | Static OLS | ln(volume) on price, numeric distribution, discount, Easter dummy, promotional share; VIF, Breusch–Pagan, Breusch–Godfrey, RESET 
