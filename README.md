@@ -52,37 +52,6 @@ Shared settings (regressors, calendar windows, number of lags, train/test split)
 * BIC differences between the leading models are small, so more than one specification fits comparably well; `R/10_sensitivity_arma_order.R` checks that the forecasting conclusion does not hinge on one ARMA order.
 * The forecast evaluation uses a single 18-week test window, and ARIMAX forecasts treat future regressors as known.
 
-## Repository structure
-
-```
-.
-├── R/                      analysis scripts (run in numerical order)
-├── data/
-│   ├── raw/                put the confidential weekly_data.csv here (git-ignored)
-│   └── sample/             synthetic data + the Python script that generates it
-├── outputs/                tables and figures written by the scripts (git-ignored)
-├── DATA.md                 data dictionary and variable definitions
-└── run_all.R               runs the full pipeline
-```
-
-## How to run
-
-Requirements: R (4.x) and the packages `forecast`, `lmtest`, `sandwich`, `car`, `tseries`, `aod`, `testcorr`.
-
-```r
-install.packages(c("forecast", "lmtest", "sandwich", "car", "tseries", "aod", "testcorr"))
-```
-
-From the repository root:
-
-```bash
-Rscript run_all.R                      # whole pipeline
-Rscript R/08_arimax.R                  # a single step
-```
-
-If `data/raw/weekly_data.csv` does not exist, the synthetic sample is used automatically. To use another file: `DEMAND_DATA=path/to/file.csv Rscript run_all.R`.
-
-The synthetic sample can be regenerated with `python data/sample/make_synthetic_data.py` (needs `numpy` and `pandas`).
 
 ## Author
 
