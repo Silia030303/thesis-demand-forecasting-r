@@ -7,8 +7,7 @@ The thesis studies weekly sales of a single consumer product (**138 weekly obser
 1. How are price, distribution, discounts, promotional activity and seasonality related to demand?
 2. Do dynamic time-series models (ARIMA, ARIMAX) forecast demand better than a purely autoregressive benchmark?
 
-> **Data confidentiality.** The data are confidential and are **not** included in this repository. `data/sample/` contains a **synthetic** data set with the same structure so that the code can be run end to end. Results obtained on the synthetic data are not the thesis results. See [`DATA.md`](DATA.md).
-
+> **Data confidentiality.** The data are confidential and are **not** included in this repository. 
 ## Methods
 
 | Step | What is done 
