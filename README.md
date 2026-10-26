@@ -13,17 +13,16 @@ The thesis studies weekly sales of a single consumer product (**138 weekly obser
 
 | Step | What is done | Script |
 |---|---|---|
-| Exploration | Time-series plots, descriptive statistics, correlation matrix | `R/02_exploratory_plots.R` |
-| Variable selection | Exhaustive search over 2⁷ − 1 = 127 OLS models, ranked by BIC (AIC as a secondary criterion) | `R/03_variable_selection_bic.R` |
-| Static OLS | ln(volume) on price, numeric distribution, discount, Easter dummy, promotional share; VIF, Breusch–Pagan, Breusch–Godfrey, RESET | `R/04_ols_diagnostics.R` |
-| Dynamic regression | Lags of ln(volume) chosen by BIC on a common sample; Newey–West (HAC) standard errors | `R/05_dynamic_newey_west.R` |
-| Identification | ADF (several lag orders) and Phillips–Perron tests, ACF/PACF, trend and differences | `R/06_stationarity_identification.R` |
-| ARIMA | Grid of ARIMA(p,0,q) by AIC/BIC; ARIMA(3,0,0) benchmark; Ljung–Box, Jarque–Bera, AR roots | `R/07_arima.R` |
-| ARIMAX | Regression with ARIMA(3,0,0) errors; same diagnostics | `R/08_arimax.R` |
-| Forecast evaluation | 120 weeks for estimation, 18 weeks held out; MAE and RMSE on the log scale | `R/09_forecast_evaluation.R` |
-| Sensitivity (extra) | Out-of-sample comparison across ARMA orders | `R/10_sensitivity_arma_order.R` |
-| Seasonal models (optional) | SARIMA/SARIMAX with period 52 | `R/11_seasonal_robustness.R` |
-
+| Exploration | Time-series plots, descriptive statistics, correlation matrix 
+| Variable selection | Exhaustive search over 2⁷ − 1 = 127 OLS models, ranked by BIC (AIC as a secondary criterion)
+| Static OLS | ln(volume) on price, numeric distribution, discount, Easter dummy, promotional share; VIF, Breusch–Pagan, Breusch–Godfrey, RESET 
+| Dynamic regression | Lags of ln(volume) chosen by BIC on a common sample; Newey–West (HAC) standard errors 
+| Identification | ADF (several lag orders) and Phillips–Perron tests, ACF/PACF, trend and differences 
+| ARIMA | Grid of ARIMA(p,0,q) by AIC/BIC; ARIMA(3,0,0) benchmark; Ljung–Box, Jarque–Bera, AR roots 
+| ARIMAX | Regression with ARIMA(3,0,0) errors; same diagnostics 
+| Forecast evaluation | 120 weeks for estimation, 18 weeks held out; MAE and RMSE on the log scale 
+| Sensitivity (extra) | Out-of-sample comparison across ARMA orders 
+| Seasonal models (optional) | SARIMA/SARIMAX with period 52 
 Shared settings (regressors, calendar windows, number of lags, train/test split) are in `R/00_setup.R`; variable construction is in `R/01_prepare_data.R`.
 
 ## Main results (thesis, real data)
