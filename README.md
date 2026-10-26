@@ -48,7 +48,7 @@ Shared settings (regressors, calendar windows, number of lags, train/test split)
 
 * 138 weekly observations are too few for reliable annual (period-52) seasonal modelling; seasonal models often fail to converge.
 * Coefficients are conditional associations, not causal effects: price, distribution and promotions may be set in response to expected demand.
-* BIC differences between the leading models are small, so more than one specification fits comparably well; `R/10_sensitivity_arma_order.R` checks that the forecasting conclusion does not hinge on one ARMA order.
+* BIC differences between the leading models are small, so more than one specification fits comparably well; checks that the forecasting conclusion does not hinge on one ARMA order.
 * The forecast evaluation uses a single 18-week test window, and ARIMAX forecasts treat future regressors as known.
 
 
